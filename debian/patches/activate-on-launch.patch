@@ -1,0 +1,22 @@
+From: Hiroaki Nakamura <hnakamur@gmail.com>
+Date: Fri, 23 Mar 2018 12:05:00 +0900
+Subject: Activate on launch for IBus>=1.5.0 too
+
+https://github.com/google/mozc/issues/381
+---
+ src/unix/ibus/property_handler.cc | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/src/unix/ibus/property_handler.cc b/src/unix/ibus/property_handler.cc
+index cd2c77c..f066453 100644
+--- a/src/unix/ibus/property_handler.cc
++++ b/src/unix/ibus/property_handler.cc
+@@ -80,7 +80,7 @@ bool GetDisabled(IBusEngine *engine) {
+ // On IBus 1.4.x, IBus expects that an IME should always be turned on and
+ // IME on/off keys are handled by IBus itself rather than each IME.
+ #if IBUS_CHECK_VERSION(1, 5, 0)
+-const bool kActivatedOnLaunch = false;
++const bool kActivatedOnLaunch = true;
+ #else
+ const bool kActivatedOnLaunch = true;
+ #endif  // IBus>=1.5.0
