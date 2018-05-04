@@ -1,3 +1,9 @@
+mozc (2.20.2673.102+dfsg-2ubuntu1ppa1~ubuntu18.04) bionic; urgency=medium
+
+  * Change target to Ubuntu 18.04 
+
+ -- Hiroaki Nakamura <hnakamur@gmail.com>  Fri, 04 May 2018 19:08:48 +0900
+
 mozc (2.20.2673.102+dfsg-2ubuntu1ppa1~ubuntu17.10.1) artful; urgency=medium
 
   * Activate mozc on launch even for IBus>=1.5.0
